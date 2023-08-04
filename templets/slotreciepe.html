@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container my-5 d-flex justify-content-center " style="width: 100vw; height: 100vh;">
+   <div class="justify-content-center ">
+       
+    <div class="card text-center mb-3" style="width: 18rem;">
+        <div class="card-header">Slot Booking Reciepe</div>
+        <div class="card-body">            
+            <p class="card-text"><b>Fuelstation name :</b> {{fsdata.station_name}}</p>
+            <p class="card-text"><b>City :</b> {{fsdata.city}}</p>
+      <p class="card-text"><b>Slot Number :</b> {{slotnumber}}</p>
+      <p class="card-text"><b>Name:</b> {{name}}</p>
+      <p class="card-text"><b>Email</b>:</b> {{eamil}}</p>
+
+    </div>
+    <a class="btn btn-primary" href="{% url 'index' %}">Home</a>
+  </div>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+
+{% endblock body %}

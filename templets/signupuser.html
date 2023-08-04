@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container my-5 d-flex justify-content-center " style="width: 100vw; height: 100vh;">
+   <div class="justify-content-center ">
+       <h2>User Sign up</h2>
+   <div style="max-width: 600px;">
+       <form action="{% url 'signupuser' %}" method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email"aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="uname" class="form-label">Username</label>
+          <input type="text" class="form-control" id="uname" name="uname">
+        </div>
+        <div class="mb-3">
+          <label for="contactno" class="form-label">Contact no.</label>
+          <input type="number" class="form-control" id="contactno" name="contactno">
+        </div>
+        <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password">
+    </div>
+    <div class="mb-3">
+      <label for="cpassword" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" id="cpassword" name="cpassword">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
+
+</div>
+
+{% endblock body %}

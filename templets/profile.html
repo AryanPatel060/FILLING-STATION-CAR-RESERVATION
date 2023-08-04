@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+ <div class="comtainer my-5 text-center d-flex justify-content-center">
+     
+     <div class="card w-75 mb-3 ">
+        <div>
+            <div class="card-heared">
+                
+            </div>
+            <div class="card-header">
+                profile of {{request.user.username}}
+               </div>
+            <div class="card-body">
+                <h4>
+                    <div class="card-text"> <p>Username : {{request.user.username}}</p></div>  
+                    <div class="card-text"> <p>Email : {{request.user.email}}</p></div>  
+                </h4>
+            </div>
+           
+        </div>
+        <div>
+            <a href="{% url 'index' %}" class="btn btn-primary mb-2">Home</a>
+        </div>
+            </div>
+        </div>
+  </div>
+{% endblock body %}
+
+

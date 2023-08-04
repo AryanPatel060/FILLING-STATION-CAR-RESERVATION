@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container w-100">
+    <div class="container my-5" style="width: 800px; ">
+        <div class="card p-5">
+            <div class="card-header">
+             <b>{{fuelstationdata.station_name}}</b> - <small>{{fuelstationdata.city}}</small>
+            </div>
+            <div class="card-body">
+              <form action="{% url 'slotbook' %}" method="POST">
+                {% csrf_token %}
+            <div class="card py-4 px-5">
+              <div class="container mb-2">
+                <h4>Book Slot Here</h4>
+               </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" name="email"aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="uname" class="form-label">Name</label>
+                <input type="text" class="form-control" id="uname" name="uname">
+              </div>
+              <div class="mb-3">
+                <label for="contactno" class="form-label">Contact no.</label>
+                <input type="number" class="form-control" id="contactno" name="contactno">
+              </div>
+              <div>
+                <label for="contactno" class="form-label">Available slots</label>
+                <div>
+                  {% for key, value in slotlist.items %} 
+                  <input type="radio" class="btn-check " value={{key}} name="slotnumber" id="slot{{key}}" autocomplete="off">
+                  <label class="btn btn-outline-{{value}} m-2" for="slot{{key}}">{{key}}:00</label>
+                  {% endfor %}
+                </div>
+              </div>
+              <input type="number" class="form-control" id="fuelstationid" name="fuelstationid" value={{fuelstationdata.id}} hidden>
+                <div>
+                  <button type="submit" class="btn btn-primary my-3">Book Slot</button>
+                </div>
+            </div>   
+              </form>
+              
+            </div>
+          </div>
+    </div>
+</div>
+
+{% endblock body %}
