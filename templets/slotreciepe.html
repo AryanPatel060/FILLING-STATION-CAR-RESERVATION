@@ -11,10 +11,16 @@
             <p class="card-text"><b>City :</b> {{fsdata.city}}</p>
       <p class="card-text"><b>Slot Number :</b> {{slotnumber}}</p>
       <p class="card-text"><b>Name:</b> {{name}}</p>
-      <p class="card-text"><b>Email</b>:</b> {{eamil}}</p>
-
+      <p class="card-text"><b>Email:</b> {{email}}</p>
+      <p><b>Date:</b> {{date}}</p>
     </div>
-    <a class="btn btn-primary" href="{% url 'index' %}">Home</a>
+    <div>
+      <a class="btn btn-primary " href="{% url 'pdf' %}">Downlode pdf</a>
+    </div>
+    <div class="my-3">
+      <a class="btn btn-primary" href="{% url 'index' %}">Home</a>
+    </div>
+    
   </div>
         </div>
     </div>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Python Guides</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.card {
+  width: 300px;
+  background-color: #afd0ec;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: center;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card-content {
+  padding: 14px;
+}
+
+.card-content p {
+  margin: 0;
+  margin-bottom: 0px;
+}
+
+strong {
+  font-weight: bold;
+}
+    </style>
+</head>
+<!-- <div class="container my-5 d-flex justify-content-center " style="width: 100vw; height: 100vh;">
+   <div class="justify-content-center ">
+       
+    <div class="card text-center mb-3" style="width: 18rem;">
+        <div class="card-header"><h1><b>Slot Booking Reciepe</b></h1></div>
+        <div class="card-body">            
+            <p class="card-text"><b>Fuelstation name :</b> {{fsdata.station_name}}</p>
+            <p class="card-text"><b>City :</b> {{fsdata.city}}</p>
+      <p class="card-text"><b>Slot Number :</b> {{slotnumber}}</p>
+      <p class="card-text"><b>Name:</b> {{name}}</p>
+      <p class="card-text"><b>Email</b>:</b> {{email}}</p>
+    </div>
+  
+  </div>
+        </div>
+    </div>
+    
+</div>
+
+</div> -->
+
+
+<div class="card">
+    <div class="card-header ">
+        <h1><b>Slot Booking Reciepe</b></h1>
+    </div>
+    <div class="card-content">
+      <p><b>Fuelstation name :</b> {{fsdata.station_name}}</p>
+      <p><b>City :</b> {{fsdata.city}}</p>
+      <p><b>Slot Number :</b> {{slotnumber}}</p>
+      <p><b>Name:</b> {{name}}</p>
+      <p><b>Email:</b> {{email}}</p>
+      <p><b>Date:</b> {{date}}</p>
+
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  
+</body>
+</html>

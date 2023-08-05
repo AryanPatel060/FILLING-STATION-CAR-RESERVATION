@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from main import views
+from .views import GeneratePdf
 
 urlpatterns = [  
 path("",views.index,name='index'),
@@ -27,8 +28,7 @@ path("bookslot",views.bookslot,name = 'bookslot'),
 path("slotbook",views.slotbook,name = 'slotbook'),
 path("profile",views.profile,name = 'profile'),
 path("slotrecipe",views.slotrecipe,name = 'slotrecipe'),
-
-
+path('pdf/', GeneratePdf.as_view(),name='pdf'), 
 
 
 ]
